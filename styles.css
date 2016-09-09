@@ -49,6 +49,16 @@ section {
   margin-bottom: 50px;
 }
 
+
+section#info > div.row:nth-child(3) {
+  margin-top: 70px;
+}
+
+
+section > div > div {
+  height: 120px;
+}
+
 /* ----------------------------------------------------------------
 	Typography
 -----------------------------------------------------------------*/
@@ -112,7 +122,8 @@ p {
 section > div > div > p {
   font-size: 12px;
   font-weight: 200;
-
+  /*padding-bottom: 20px;*/
+  /*how do you get element from different columns to horizontally align? "Learn More" links*/
 }
 section > div > div > h3 {
   font-size: 18px;
@@ -121,6 +132,23 @@ section > div > div > h3 {
 
 }
 
+/*FIXME: making "Learn More" link look like buttons*/
+#info > div > div > a {
+  background-color: #FFF;
+  border: 1px solid #E2E2E2;
+  padding: 5px;
+  margin-bottom: 0px;
+  font-size: 16px;
+  margin-top: 0px;
+  font-weight: 400;
+  color: #002b5a;
+  position: absolute;
+  bottom: 0;
+}
+#info > div > div > a::after {
+  content: ">";
+  padding-left: 5px;
+}
 /*everything below is borrowed from tagrem stylesheet*/
 /*h5,
 h6 { margin-bottom: 20px; }
