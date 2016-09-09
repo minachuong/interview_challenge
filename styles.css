@@ -1,15 +1,6 @@
 /* ----------------------------------------------------------------
-	Colors
------------------------------------------------------------------*/
-/*background-color whole page: #E2E2E2
-background-color content: #F3F3F3
-background-color state finder: #EEEEEE*/
-
-
-/* ----------------------------------------------------------------
 	Basic Layout Styles
 -----------------------------------------------------------------*/
-
 
 #wrapper {
 	position: relative;
@@ -24,10 +15,14 @@ background-color state finder: #EEEEEE*/
   overflow: auto;
 }
 
-.row {
+section, .row {
+  /*padding: 30px;*/
   margin-left: 0px;
   margin-right: 0px;
-  background-color: #F3F3F3;
+  background-color: #f2f2f2;
+}
+section {
+  padding: 30px;
 }
 
 .jumbotron {
@@ -35,17 +30,25 @@ background-color state finder: #EEEEEE*/
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  height: 40vh;
+  height: 50vh;
   margin-bottom: 0px;
 }
 
 .state-finder-container {
   background-color: #EEEEEE;
+  padding: 15px;
+  margin-top: 25px;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+  border-radius: 3px;
 }
 
 #products {
   margin-top: 2px;
+  margin-bottom: 50px;
 }
+
 /* ----------------------------------------------------------------
 	Typography
 -----------------------------------------------------------------*/
@@ -64,20 +67,23 @@ h3 {
   margin-bottom: 42px;
   text-transform: capitalize;
   font-weight: 200;
+  font-family: 'Lato', sans-serif;  /*FIXME: ignores font-weight*/
 }
 h1 {
   font-size: 42px;
-  /*font-weight: 200;*/
+  font-weight: 200;
 }
 
 h2 {
   font-size: 40px;
-  /*font-weight: 200;*/
+  font-weight: 200;
+  padding-left: 15px;
 }
 
 h3 {
   font-size: 24px;
   font-weight: normal;
+  margin-bottom: 0px;
 }
 
 /*on header content*/
@@ -85,17 +91,35 @@ p {
   color: #333;
   font-family: 'Lato', sans-serif;
   font-size: 18px;
+  text-align: justify;
+  line-height: 1.4;
+  text-transform: none;
 }
 
 /*on light-gray box*/
-.state-finder-container {
-  color: #333;
-  font-family: 'Lato', sans-serif;
+.state-finder-container > p {
+  color: #002b5a;
   font-size: 12px;
-  text-align: justify;
+  margin-bottom: 5px;
 }
 
+.state-finder-container > h2 {
+  font-size: 20px;
+  margin: 0px 0px 15px 0px;
+  padding-left: 0px;
+}
 
+section > div > div > p {
+  font-size: 12px;
+  font-weight: 200;
+
+}
+section > div > div > h3 {
+  font-size: 18px;
+  margin-top: 0px;
+  font-weight: 400;
+
+}
 
 /*everything below is borrowed from tagrem stylesheet*/
 /*h5,
