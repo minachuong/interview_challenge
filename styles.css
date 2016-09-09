@@ -1,0 +1,175 @@
+/* ----------------------------------------------------------------
+	Colors
+-----------------------------------------------------------------*/
+/*background-color whole page: #E2E2E2
+background-color content: #F3F3F3
+background-color state finder: #EEEEEE*/
+
+
+/* ----------------------------------------------------------------
+	Basic Layout Styles
+-----------------------------------------------------------------*/
+
+
+#wrapper {
+	position: relative;
+	float: none;
+	width: 960px;
+	margin: 0 auto;
+  /*background-image: url('');*/
+	background-color: #E2E2E2;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+  background-color: #F3F3F3;
+}
+
+.jumbotron {
+  background-image: url('img/banner.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  height: 40vh;
+  margin-bottom: 0px;
+}
+
+.state-finder-container {
+  background-color: #EEEEEE;
+}
+
+#products {
+  margin-top: 2px;
+}
+/* ----------------------------------------------------------------
+	Typography
+-----------------------------------------------------------------*/
+
+body, .header-content {
+	font-family: 'Lato', sans-serif;
+  /*background-image: url('/img/tan.jpg');*/
+  /*file not provided in materials*/
+  background-color: #E2E2E2;
+}
+
+h1,
+h2,
+h3 {
+	color: #002b5a;
+  margin-bottom: 42px;
+  text-transform: capitalize;
+  font-weight: 200;
+}
+h1 {
+  font-size: 42px;
+  /*font-weight: 200;*/
+}
+
+h2 {
+  font-size: 40px;
+  /*font-weight: 200;*/
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+/*on header content*/
+p {
+  color: #333;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+}
+
+/*on light-gray box*/
+.state-finder-container {
+  color: #333;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  text-align: justify;
+}
+
+
+
+/*everything below is borrowed from tagrem stylesheet*/
+/*h5,
+h6 { margin-bottom: 20px; }
+
+h1 { font-size: 36px; }
+
+h2 { font-size: 30px; }
+
+h3 { font-size: 24px; }
+
+h4 { font-size: 18px; }
+
+h5 { font-size: 14px; }
+
+h6 { font-size: 12px; }
+
+h4 { font-weight: 600; }
+
+h5,
+h6 { font-weight: bold; }
+
+h1 > span:not(.nocolor),
+h2 > span:not(.nocolor),
+h3 > span:not(.nocolor),
+h4 > span:not(.nocolor),
+h5 > span:not(.nocolor),
+h6 > span:not(.nocolor) { color: #f26522; }
+
+p,
+pre,
+ul,
+ol,
+dl,
+dd,
+blockquote,
+address,
+table,
+fieldset,
+form { margin-bottom: 30px; }
+
+small { font-family: 'Lato', sans-serif; }
+
+.uppercase { text-transform: uppercase !important; }
+
+.tright { text-align: right !important; }
+
+.tleft { text-align: left !important; }
+
+.fright { float: right !important; }
+
+.fleft { float: left !important; }
+
+.fnone { float: none !important; }
+
+.ohidden {
+	position: relative;
+	overflow: hidden !important;
+}
+a {
+	text-decoration: none !important;
+	color: #f26522;
+}
+
+a:hover { color: #222; }
+
+a img { border: none; }
+
+img { max-width: 100%; }
+
+iframe { border: none !important; }*/
+
+
+
+/* ----------------------------------------------------------------
+	Sections
+-----------------------------------------------------------------*/
