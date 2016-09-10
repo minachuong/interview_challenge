@@ -92,6 +92,10 @@ h3 {
   font-weight: normal;
   margin-bottom: 0px;
 }
+h4 {
+	font-size: 16px;
+	color: #337ab7;
+}
 
 /*on header content*/
 p {
@@ -116,16 +120,19 @@ p {
   padding-left: 0px;
 }
 
-section > div > div > p {
+section > div > div > p, ul > li > p {
   font-size: 14px;
   font-weight: 200;
   /*padding-bottom: 20px;*/
 }
-section > div > div > h3 {
+section > div > div > h3, .product-listing > li > h3 {
   font-size: 18px;
   margin-top: 0px;
   font-weight: 400;
 
+}
+.product-listing > li > h3 {
+	font-size: 20px;
 }
 
 /*styling for "Learn More" links to look like buttons */
@@ -145,22 +152,6 @@ section > div > div > h3 {
   -webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
   border-radius: 3px;
 }
-.link-button {
-  background-color: #FFF;
-  border: 1px solid #E2E2E2;
-  padding: 10px 15px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  font-size: 14px;
-  font-weight: 400;
-  color: #002b5a;
-  /*position: absolute;
-  bottom: 0;*/
-  box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
-  -moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
-  -webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
-  border-radius: 2px;
-}
 
 /*FIXME: "Select State" needs to be this color*/
 #search-field-grey-text {
@@ -170,6 +161,21 @@ section > div > div > h3 {
   content: ">";
   padding-left: 5px;
 }
+ul {
+	display: inline-flex;
+  padding-left: 10px;
+}
+
+li {
+	list-style: none;
+	background-color: #FFF;
+	padding: 20px;
+	margin: 5px;
+	width: 25%;
+	/*display: inline-flex;*/
+}
+
+
 
 /* ----------------------------------------------------------------
 	Styles
@@ -184,14 +190,6 @@ select.dropdown {
   height: 25px;
   padding: 0px 11px;
 }
-
-/*select.dropdown > option {
-  position: absolute;
-  top: 25px;
-  left: 0;
-  right: 0;
-
-}*/
 
 button.search-button {
   background-color: #FFF;
@@ -220,6 +218,9 @@ button.search-button {
 
 .fleft {
   float: left;
+}
+.fright {
+  float: right;
 }
 
 .inline {
@@ -257,7 +258,13 @@ select.form-control {
     height: 120px;*/
   }
 }
-@media (width: 320px){
+@media (max-width: 320px){
+	ul {
+		display: inline;
+	}
+	li {
+		width: 100%;
+	}
 }
 @media (max-width: 500px) {
 }
