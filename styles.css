@@ -185,13 +185,13 @@ select.dropdown {
   padding: 0px 11px;
 }
 
-select.dropdown > option {
+/*select.dropdown > option {
   position: absolute;
-  top: 100%;
+  top: 25px;
   left: 0;
   right: 0;
 
-}
+}*/
 
 button.search-button {
   background-color: #FFF;
