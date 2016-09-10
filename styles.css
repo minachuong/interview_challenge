@@ -55,6 +55,10 @@ section#info > div.row:nth-child(3) {
 section > div > div {
   height: 140px;
 }
+aside {
+	margin-top: 30px;
+	padding-right: 5px;
+}
 
 /* ----------------------------------------------------------------
 	Typography
@@ -120,10 +124,23 @@ p {
   padding-left: 0px;
 }
 
-section > div > div > p, ul > li > p {
+/*TODO: refactor!*/
+section > div > div > p, ul > li > p, aside > p {
   font-size: 14px;
   font-weight: 200;
   /*padding-bottom: 20px;*/
+}
+ul > li > p {
+	text-align: left;
+}
+ul > li > a {
+	/*position: absolute;*/
+  /*bottom: 0;*/
+	/*overflow: hidden;*/
+}
+aside > p {
+	padding: 3px 10px 0px 0px;
+
 }
 section > div > div > h3, .product-listing > li > h3 {
   font-size: 18px;
@@ -172,6 +189,7 @@ li {
 	padding: 20px;
 	margin: 5px;
 	width: 25%;
+	text-align: left;
 	/*display: inline-flex;*/
 }
 
@@ -236,6 +254,15 @@ select.form-control {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+}
+
+/* ----------------------------------------------------------------
+  Product Info Styling
+-----------------------------------------------------------------*/
+
+section#product-info {
+	background-color: #FFF;
+  margin: 5px 5px 5px 15px;
 }
 
 /* ----------------------------------------------------------------
