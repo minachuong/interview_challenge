@@ -2,11 +2,13 @@
 <html>
     <head>
         <title>Tagrem Test Submitted by Mina Chuong</title>
-        <link rel="stylesheet" type="text/css" href="http://tagrem.com/sites/1/tagrem/tagrem.com/themes/tagrem.com/css/bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="styles.css"/>
+        <script src="js/angular.min.js"></script>
+        <!-- <script src="js/app.js"></script> -->
     </head>
-    <body>
+    <body ng-app="myApp">
       <div class="jumbotron">
         <!-- <div class="container"> -->
         <!-- </div> -->
@@ -140,79 +142,46 @@
             <ul class="product-listing">
               <li>
                   <h3>Product Title 1</h3>
-                  <h4>Staring at $500</h4>
+                  <h4>Starting at $500</h4>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                   <a>Learn More</a>
               </li>
               <li>
                 <h3>Product Title 2</h3>
-                <h4>Staring at $1900</h4>
+                <h4>Starting at $1900</h4>
                 <p>Donec ornare magna sit amet erat molestie sollicitudin ac vitae lectus.</p>
                 <a>Learn More</a>
               </li>
               <li>
                 <h3>Product Title 3</h3>
-                <h4>Staring at $2730</h4>
+                <h4>Starting at $2730</h4>
                 <p>Cras non metus sed odio tristique imperdiet.</p>
                 <a>Learn More</a>
               </li>
               <li>
                 <h3>Product Title 4</h3>
-                <h4>Staring at $731</h4>
+                <h4>Starting at $731</h4>
                 <p>Pellentesque mattis tellus ut molestie dapibus.</p>
                 <a>Learn More</a>
               </li>
             </ul>
-            <section id="product-info">
-              <!-- Full Info when Learn More on product listings is clicked-->
+            <!-- Full Info when Learn More on product listings is clicked-->
+            <section id="product-info" ng-controller="MainController">
+              <!-- <div ng-repeat="product in products"> -->
+                <p>{{ product.title }}</p>
+                <p>{{ product.price }}</p>
+                <p>{{ product.desc }}</p>
+                <!-- <p>{{ product.price | currency }}</p> -->
+                <!-- <p>{{ product.pubdate | date }}</p> -->
+
+              <!-- </div> -->
             </section>
           </section> <!--end of Products-->
       </div> <!--end of #wrapper-->
-        <script type="text/javascript">
-        window.products = {
-        1: {
-            id : 1,
-            order: 1,
-            'title' : 'Product Title 1',
-            'price' : 'Staring at $500',
-            'desc' : 'Cras a ante eget dui dignissim molestie nec non lectus. Donec id sapien tristique, iaculis odio a, gravida ligula. In hac habitasse platea dictumst. Praesent non lacus elit. Sed convallis erat sem, ac egestas ipsum tempor in. Sed consectetur ex at dolor ullamcorper vulputate. Ut tristique ipsum velit, eget pretium ipsum dictum vel. Aenean ut tempus elit, non facilisis odio. Vivamus hendrerit ipsum vel risus ultrices, ut ornare metus ornare. Quisque semper ante ac pellentesque vestibulum. Cras a massa turpis. Pellentesque congue leo velit, non porta dui euismod nec.<br> <br> Mauris sed enim risus. Quisque mollis justo quis commodo euismod. Nullam non massa in lorem cursus sagittis. Sed laoreet felis mauris, a eleifend sapien molestie eget. Duis at volutpat elit. Phasellus sit amet erat ut libero lobortis sollicitudin pellentesque ac lectus. Phasellus venenatis ultrices justo nec venenatis.<br><br>'
-                +'<ul>'
-                        + '     <li>Non porta dui euismod nec</li>'
-                        + '     <li>Ut tristique ipsum velit</li>'
-                                        + '     <li>Quisque mollis justo</li>'
-                +'</ul>',
-            'uri-stub'   : '/buy-mattress/iseries/iseries-hybrid/iseries-approval-super-pillow-top',
-                            'src'        : 'material/000010885.jpg'
-        },
-        2: {
-            id : 2,
-            order: 2,
-            'title' : 'Product Title 2',
-            'price' : 'Staring at $1900',
-            'desc' : 'Cras a ante eget dui dignissim molestie nec non lectus. Donec id sapien tristique, iaculis odio a, gravida ligula. In hac habitasse platea dictumst. Praesent non lacus elit. Sed convallis erat sem, ac egestas ipsum tempor in. Sed consectetur ex at dolor ullamcorper vulputate. Ut tristique ipsum velit, eget pretium ipsum dictum vel. Aenean ut tempus elit, non facilisis odio. Vivamus hendrerit ipsum vel risus ultrices, ut ornare metus ornare. Quisque semper ante ac pellentesque vestibulum. Cras a massa turpis. Pellentesque congue leo velit, non porta dui euismod nec.<br> <br> Mauris sed enim risus. Quisque mollis justo quis commodo euismod. Nullam non massa in lorem cursus sagittis. Sed laoreet felis mauris, a eleifend sapien molestie eget. Duis at volutpat elit. Phasellus sit amet erat ut libero lobortis sollicitudin pellentesque ac lectus. Phasellus venenatis ultrices justo nec venenatis.',
-            'uri-stub'   : '/buy-mattress/iseries/iseries-hybrid/iseries-approval-super-pillow-top',
-                            'src'        : 'material/ff_x20_008.JPG'
-        },
-        3: {
-            id : 3,
-            order: 3,
-            'title' : 'Product Title 3',
-            'price' : 'Staring at $2730',
-            'desc' : 'Cras a ante eget dui dignissim molestie nec non lectus. Donec id sapien tristique, iaculis odio a, gravida ligula. In hac habitasse platea dictumst. Praesent non lacus elit. Sed convallis erat sem, ac egestas ipsum tempor in. Sed consectetur ex at dolor ullamcorper vulputate. Ut tristique ipsum velit, eget pretium ipsum dictum vel. Aenean ut tempus elit, non facilisis odio. Vivamus hendrerit ipsum vel risus ultrices, ut ornare metus ornare. Quisque semper ante ac pellentesque vestibulum. Cras a massa turpis. Pellentesque congue leo velit, non porta dui euismod nec.<br> <br> Mauris sed enim risus. Quisque mollis justo quis commodo euismod. Nullam non massa in lorem cursus sagittis. Sed laoreet felis mauris, a eleifend sapien molestie eget. Duis at volutpat elit. Phasellus sit amet erat ut libero lobortis sollicitudin pellentesque ac lectus. Phasellus venenatis ultrices justo nec venenatis.',
-            'uri-stub'   : '/buy-mattress/iseries/iseries-hybrid/iseries-approval-super-pillow-top',
-                            'src'        : 'material/sample1.jpg'
-        },
-        4: {
-            id : 4,
-            order: 4,
-            'title' : 'Product Title 3',
-            'price' : 'Staring at $731',
-            'desc' : 'Cras a ante eget dui dignissim molestie nec non lectus. Donec id sapien tristique, iaculis odio a, gravida ligula. In hac habitasse platea dictumst. Praesent non lacus elit. Sed convallis erat sem, ac egestas ipsum tempor in. Sed consectetur ex at dolor ullamcorper vulputate. Ut tristique ipsum velit, eget pretium ipsum dictum vel. Aenean ut tempus elit, non facilisis odio. Vivamus hendrerit ipsum vel risus ultrices, ut ornare metus ornare. Quisque semper ante ac pellentesque vestibulum. Cras a massa turpis. Pellentesque congue leo velit, non porta dui euismod nec.<br> <br> Mauris sed enim risus. Quisque mollis justo quis commodo euismod. Nullam non massa in lorem cursus sagittis. Sed laoreet felis mauris, a eleifend sapien molestie eget. Duis at volutpat elit. Phasellus sit amet erat ut libero lobortis sollicitudin pellentesque ac lectus. Phasellus venenatis ultrices justo nec venenatis.',
-            'uri-stub'   : '/buy-mattress/iseries/iseries-hybrid/iseries-approval-super-pillow-top',
-                            'src'        : 'material/sample_08.jpg'
-        }
-        }
+      <!-- Modules -->
+      <script src="js/app.js"></script>
 
-        </script>
+      <!-- Controllers -->
+      <!-- <script src="js/MainController.js"></script> -->
     </body>
 </html>
